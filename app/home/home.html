@@ -1,0 +1,23 @@
+<h1>Home</h1>
+<p>{{message}}</p>
+<p>{{greeting}}</p>
+
+<input type="text" ng-model="userId" ng-init="userId=1"><input type="button" value="Get Todos" ng-click="getTodos(userId)">
+<table>
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="todo in todos track by $index">
+            <td>{{todo.userId}}</td>
+            <td>{{todo.id}}</td>
+            <td>{{todo.title}}</td>
+            <td>{{todo.completed}}</td>
+        </tr>
+    </tbody>
+</table>
